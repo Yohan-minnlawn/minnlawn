@@ -1029,8 +1029,13 @@ a {
 }
 
 .service-detail__image {
+  position: relative;
   min-height: 390px;
-  background: linear-gradient(145deg, #d7e2cf 0%, #c7d6bc 50%, #e7ede1 100%);
+  overflow: hidden;
+}
+
+.service-detail__image img {
+  object-fit: cover;
 }
 
 .service-detail__content {

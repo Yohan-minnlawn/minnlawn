@@ -1,10 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function WhyMinnlawn() {
   return (
     <section className="why-minnlawn">
       <div className="container why-minnlawn__inner">
-        <div className="why-minnlawn__image" aria-hidden="true" />
+        <div className="why-minnlawn__image">
+          <Image
+            src="/images/projects/fire-pit-project-finished.webp"
+            alt="Finished backyard fire pit landscaping project by Minnlawn"
+            fill
+            sizes="(max-width: 1100px) 100vw, 52vw"
+          />
+        </div>
 
         <div className="why-minnlawn__content">
           <p className="eyebrow">Why Minnlawn?</p>
@@ -12,15 +20,14 @@ export default function WhyMinnlawn() {
           <h2>Local Property Care You Can Count On</h2>
 
           <p>
-            Minnlawn is a family-owned lawn care and landscaping company
-            serving residential and commercial properties throughout the
-            Rochester area.
+            Minnlawn is a family-owned lawn care and landscaping company serving
+            residential and commercial properties throughout the Rochester area.
           </p>
 
           <p>
             From routine lawn maintenance and landscaping to seasonal cleanup
-            and outdoor improvements, the focus is dependable service,
-            attention to detail, and quality work.
+            and outdoor improvements, the focus is dependable service, attention
+            to detail, and quality work.
           </p>
 
           <div className="why-minnlawn__trust">

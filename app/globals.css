@@ -516,6 +516,12 @@ a {
 
 .client-type-card__image {
   background: linear-gradient(145deg, #dbe5d2 0%, #cbd9bf 48%, #e8eee2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.client-type-card__image img {
+  object-fit: cover;
 }
 
 .client-type-card__content {
@@ -569,9 +575,15 @@ a {
 }
 
 .why-minnlawn__image {
+  position: relative;
   min-height: 420px;
+  overflow: hidden;
   border-radius: 14px;
   background: linear-gradient(145deg, #d7e1cf 0%, #c9d8bf 48%, #e7ede1 100%);
+}
+
+.why-minnlawn__image img {
+  object-fit: contain;
 }
 
 .why-minnlawn__content {
@@ -1117,9 +1129,14 @@ a {
 }
 
 .about-story__image {
+  position: relative;
   min-height: 460px;
+  overflow: hidden;
   border-radius: 14px;
-  background: linear-gradient(145deg, #d7e2cf 0%, #c7d6bc 50%, #e7ede1 100%);
+}
+
+.about-story__image img {
+  object-fit: cover;
 }
 
 .about-story__content h2 {

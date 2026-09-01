@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 
@@ -22,7 +23,14 @@ export default function AboutPage() {
 
       <section className="about-story">
         <div className="container about-story__inner">
-          <div className="about-story__image" aria-hidden="true" />
+          <div className="about-story__image">
+            <Image
+              src="/images/projects/walkway-rock-bed.webp"
+              alt="Finished stone walkway and rock landscaping project completed by Minnlawn"
+              fill
+              sizes="(max-width: 1100px) 100vw, 50vw"
+            />
+          </div>
 
           <div className="about-story__content">
             <p className="eyebrow">Our Story</p>
@@ -30,9 +38,11 @@ export default function AboutPage() {
             <h2>Dependable Service. Quality Work. Local Commitment.</h2>
 
             <p>
-              We are committed to providing reliable, high-quality lawn care and
-              landscaping services with a personal touch, helping homeowners and
-              businesses keep their properties looking their best.
+              Minnlawn provides dependable lawn care, landscaping, seasonal
+              cleanup, snow removal, and small tree removal for residential and
+              commercial properties throughout the Rochester area. We focus on
+              clean, well-finished work and straightforward service that helps
+              properties look cared for year-round.
             </p>
 
             <p>

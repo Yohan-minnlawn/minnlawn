@@ -7,9 +7,9 @@ const galleryItems = [
     alt: "Rock bed and walkway landscaping project completed by Minnlawn",
   },
   {
-    src: "/images/projects/fire-pit-project-finished.webp",
-    alt: "Finished outdoor fire pit landscaping project by Minnlawn",
-  },
+  src: "/images/projects/landscape-tree-ring.webp",
+  alt: "Finished landscaped tree ring completed by Minnlawn",
+},
   {
     src: "/images/projects/retaining-wall-garden.webp",
     alt: "Retaining wall and garden landscaping project by Minnlawn",

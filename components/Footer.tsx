@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -5,7 +6,13 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__inner">
         <div className="site-footer__brand">
-          <div className="brand__mark">M</div>
+          <Image
+            src="/images/brand/logo.webp"
+            alt=""
+            width={48}
+            height={48}
+            className="brand__mark"
+          />
 
           <div>
             <strong>Minnlawn</strong>
@@ -46,16 +53,16 @@ export default function Footer() {
 
           <p>Residential and commercial property care in the Rochester area.</p>
 
-          <a href="#quote" className="site-footer__quote">
-            Request a Free Quote →
-          </a>
+          <Link href="/#quote" className="site-footer__quote">
+            Request a Free Quote &rarr;
+          </Link>
         </div>
       </div>
 
       <div className="container site-footer__bottom">
         <p>
-          © {new Date().getFullYear()} Minnlawn Lawn &amp; Landscape. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Minnlawn Lawn &amp; Landscape. All
+          rights reserved.
         </p>
       </div>
     </footer>

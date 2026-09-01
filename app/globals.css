@@ -622,6 +622,100 @@ a {
   text-transform: uppercase;
 }
 
+/* Reviews Preview */
+.reviews-preview {
+  padding: 88px 0;
+  background: #f5f7f1;
+}
+
+.reviews-preview__heading {
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.reviews-preview__heading h2 {
+  margin-top: 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: #28451f;
+}
+
+.reviews-preview__heading > p:last-child {
+  margin-top: 14px;
+  color: #596456;
+  line-height: 1.7;
+}
+
+.reviews-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(40, 69, 31, 0.16);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(40, 69, 31, 0.07);
+}
+
+.review-card__stars {
+  margin-bottom: 18px;
+  color: #b88716;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+}
+
+.review-card__text {
+  flex: 1;
+  margin: 0;
+  color: #3f493d;
+  line-height: 1.75;
+}
+
+.review-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(40, 69, 31, 0.12);
+}
+
+.review-card__avatar {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5ebdf;
+  color: #28451f;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.review-card__reviewer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.review-card__reviewer strong {
+  color: #28451f;
+}
+
+.review-card__reviewer span {
+  color: #6b8e23;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .gallery-preview {
   padding: 52px 0 96px;
   background: #ffffff;
@@ -777,6 +871,37 @@ a {
 
 .quote-form__row > * {
   min-width: 0;
+}
+
+.quote-form__honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.quote-form__status {
+  margin: 14px 0 0;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.quote-form__status--success {
+  color: #28451f;
+}
+
+.quote-form__status--error {
+  color: #8b2e2e;
+}
+
+.quote-form button:disabled {
+  opacity: 0.7;
+  cursor: wait;
 }
 
 .form-field input,

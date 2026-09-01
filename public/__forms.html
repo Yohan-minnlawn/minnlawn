@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Minnlawn Forms</title>
+  </head>
+
+  <body>
+    <form
+      name="quote-request"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      enctype="multipart/form-data"
+    >
+      <input type="hidden" name="form-name" value="quote-request" />
+
+      <p>
+        <label>
+          Don’t fill this out if you’re human:
+          <input name="bot-field" />
+        </label>
+      </p>
+
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="address" />
+
+      <select name="propertyType">
+        <option value="residential">Residential</option>
+        <option value="commercial">Commercial</option>
+      </select>
+
+      <select name="service">
+        <option value="lawn-care">Lawn Care</option>
+        <option value="landscaping">Landscaping</option>
+        <option value="cleanup">Spring &amp; Fall Cleanup</option>
+        <option value="snow-removal">Snow Removal</option>
+        <option value="tree-removal">Small Tree Removal</option>
+        <option value="other">Other / Not Sure</option>
+      </select>
+
+      <textarea name="message"></textarea>
+
+      <input type="file" name="photo1" />
+      <input type="file" name="photo2" />
+      <input type="file" name="photo3" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

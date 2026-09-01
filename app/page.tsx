@@ -4,6 +4,7 @@ import SeasonalSpotlight from "@/components/SeasonalSpotlight";
 import ServicesPreview from "@/components/ServicesPreview";
 import ClientTypes from "@/components/ClientTypes";
 import WhyMinnlawn from "@/components/WhyMinnlawn";
+import ReviewsPreview from "@/components/ReviewsPreview";
 import GalleryPreview from "@/components/GalleryPreview";
 import QuoteSection from "@/components/QuoteSection";
 import Footer from "@/components/Footer";
@@ -51,6 +52,7 @@ export default function Home() {
       <ServicesPreview />
       <ClientTypes />
       <WhyMinnlawn />
+      <ReviewsPreview />
       <GalleryPreview />
       <QuoteSection />
       <Footer />

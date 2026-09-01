@@ -1,6 +1,24 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const galleryItems = [1, 2, 3, 4];
+const galleryItems = [
+  {
+    src: "/images/projects/walkway-rock-bed.webp",
+    alt: "Rock bed and walkway landscaping project completed by Minnlawn",
+  },
+  {
+    src: "/images/projects/fire-pit-project-finished.webp",
+    alt: "Finished outdoor fire pit landscaping project by Minnlawn",
+  },
+  {
+    src: "/images/projects/retaining-wall-garden.webp",
+    alt: "Retaining wall and garden landscaping project by Minnlawn",
+  },
+  {
+    src: "/images/projects/curved-backyard-rock-bed.webp",
+    alt: "Curved backyard rock landscaping completed by Minnlawn",
+  },
+];
 
 export default function GalleryPreview() {
   return (
@@ -9,7 +27,9 @@ export default function GalleryPreview() {
         <div className="gallery-preview__heading">
           <div>
             <p className="eyebrow">Recent Work</p>
+
             <h2>See What We&apos;ve Been Working On</h2>
+
             <p>
               A look at recent lawn care and landscaping projects throughout
               the Rochester area.
@@ -26,13 +46,17 @@ export default function GalleryPreview() {
             <Link
               href="/gallery"
               className="gallery-preview__item"
-              key={item}
+              key={item.src}
               aria-label="View Minnlawn project gallery"
             >
-              <div
-                className="gallery-preview__placeholder"
-                aria-hidden="true"
-              />
+              <div className="gallery-preview__placeholder">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 620px) 100vw, (max-width: 960px) 50vw, 25vw"
+                />
+              </div>
             </Link>
           ))}
         </div>

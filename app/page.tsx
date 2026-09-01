@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
 import SeasonalSpotlight from "@/components/SeasonalSpotlight";
 import ServicesPreview from "@/components/ServicesPreview";
 import ClientTypes from "@/components/ClientTypes";
@@ -10,37 +11,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main>
-      <div className="promo-bar">
-        <div className="container promo-bar__inner">
-          <span>
-            Get 10% off any service if you mention this website promotion!
-          </span>
-        </div>
-      </div>
-
-      <header className="site-header">
-        <div className="container site-header__inner">
-          <Link href="/" className="brand" aria-label="Minnlawn home">
-            <div className="brand__mark">M</div>
-
-            <div className="brand__text">
-              <span className="brand__name">Minnlawn</span>
-              <span className="brand__tag">Lawn &amp; Landscape</span>
-            </div>
-          </Link>
-
-          <nav className="site-nav" aria-label="Primary navigation">
-            <Link href="/">Home</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/gallery">Gallery</Link>
-            <Link href="/about">About</Link>
-          </nav>
-
-          <a href="#quote" className="btn btn--primary header-cta">
-            Get a Free Quote
-          </a>
-        </div>
-      </header>
+    <SiteHeader />
       <section className="hero">
         <div className="hero__overlay" />
 

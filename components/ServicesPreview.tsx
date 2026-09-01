@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const services = [
   {
@@ -15,11 +18,11 @@ const services = [
     alt: "Finished front yard rock landscaping project by Minnlawn",
   },
   {
-  name: "Spring & Fall Cleanup",
-  href: "/services#cleanup",
-  image: "/images/projects/leaves-blower.webp",
-  alt: "Minnlawn crew performing seasonal leaf cleanup",
-},
+    name: "Spring & Fall Cleanup",
+    href: "/services#cleanup",
+    image: "/images/projects/leaves-blower.webp",
+    alt: "Minnlawn performing seasonal leaf cleanup",
+  },
   {
     name: "Snow Removal",
     href: "/services#snow-removal",
@@ -34,7 +37,70 @@ const services = [
   },
 ];
 
+const getSeasonalOrder = (month: number) => {
+  if (month === 12 || month <= 3) {
+    return [
+      "Snow Removal",
+      "Small Tree Removal",
+      "Spring & Fall Cleanup",
+      "Lawn Care",
+      "Landscaping",
+    ];
+  }
+
+  if (month === 4) {
+    return [
+      "Spring & Fall Cleanup",
+      "Lawn Care",
+      "Landscaping",
+      "Small Tree Removal",
+      "Snow Removal",
+    ];
+  }
+
+  if (month >= 5 && month <= 9) {
+    return [
+      "Lawn Care",
+      "Landscaping",
+      "Spring & Fall Cleanup",
+      "Small Tree Removal",
+      "Snow Removal",
+    ];
+  }
+
+  return [
+    "Spring & Fall Cleanup",
+    "Small Tree Removal",
+    "Snow Removal",
+    "Lawn Care",
+    "Landscaping",
+  ];
+};
+
 export default function ServicesPreview() {
+  const [orderedServices, setOrderedServices] = useState(services);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const month = Number(
+        new Intl.DateTimeFormat("en-US", {
+          month: "numeric",
+          timeZone: "America/Chicago",
+        }).format(new Date()),
+      );
+
+      const order = getSeasonalOrder(month);
+
+      setOrderedServices(
+        [...services].sort(
+          (a, b) => order.indexOf(a.name) - order.indexOf(b.name),
+        ),
+      );
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
   return (
     <section className="services-preview">
       <div className="container">
@@ -56,21 +122,19 @@ export default function ServicesPreview() {
         </div>
 
         <div className="services-grid">
-          {services.map((service) => (
+          {orderedServices.map((service) => (
             <Link
               href={service.href}
               className="service-card"
               key={service.name}
             >
               <div className="service-card__image-placeholder">
-                {service.image && (
-                  <Image
-                    src={service.image}
-                    alt={service.alt}
-                    fill
-                    sizes="(max-width: 700px) 100vw, (max-width: 960px) 50vw, 33vw"
-                  />
-                )}
+                <Image
+                  src={service.image}
+                  alt={service.alt}
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 960px) 50vw, 33vw"
+                />
               </div>
 
               <div className="service-card__content">

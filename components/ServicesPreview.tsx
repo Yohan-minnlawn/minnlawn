@@ -15,22 +15,22 @@ const services = [
     alt: "Finished front yard rock landscaping project by Minnlawn",
   },
   {
-    name: "Spring & Fall Cleanup",
-    href: "/services#cleanup",
-    image: null,
-    alt: "",
-  },
+  name: "Spring & Fall Cleanup",
+  href: "/services#cleanup",
+  image: "/images/projects/leaves-blower.webp",
+  alt: "Minnlawn crew performing seasonal leaf cleanup",
+},
   {
     name: "Snow Removal",
     href: "/services#snow-removal",
-    image: null,
-    alt: "",
+    image: "/images/projects/winter-plow.webp",
+    alt: "Minnlawn snow removal service clearing a snowy property",
   },
   {
     name: "Small Tree Removal",
     href: "/services#tree-removal",
-    image: null,
-    alt: "",
+    image: "/images/projects/small-tree-removal.webp",
+    alt: "Minnlawn performing small tree removal work",
   },
 ];
 

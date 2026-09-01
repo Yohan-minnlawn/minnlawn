@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -28,7 +29,13 @@ export default function SiteHeader() {
             aria-label="Minnlawn home"
             onClick={closeMenu}
           >
-            <div className="brand__mark">M</div>
+            <Image
+              src="/images/brand/logo.webp"
+              alt=""
+              width={48}
+              height={48}
+              className="brand__mark"
+            />
 
             <div className="brand__text">
               <span className="brand__name">Minnlawn</span>
@@ -88,11 +95,7 @@ export default function SiteHeader() {
             About
           </Link>
 
-          <Link
-            href="/#quote"
-            className="btn btn--primary"
-            onClick={closeMenu}
-          >
+          <Link href="/#quote" className="btn btn--primary" onClick={closeMenu}>
             Get a Free Quote
           </Link>
         </nav>

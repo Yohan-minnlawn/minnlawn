@@ -1083,20 +1083,19 @@ a {
 }
 
 .gallery-page__item {
+  position: relative;
   min-height: 320px;
   overflow: hidden;
   border-radius: 12px;
-
-  background: linear-gradient(145deg, #d7e2cf 0%, #c7d6bc 50%, #e7ede1 100%);
-
-  transition:
-    transform 240ms ease,
-    box-shadow 240ms ease;
 }
 
-.gallery-page__item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
+.gallery-page__item img {
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.gallery-page__item:hover img {
+  transform: scale(1.03);
 }
 
 .about-story {

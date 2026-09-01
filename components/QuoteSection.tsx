@@ -43,7 +43,7 @@ export default function QuoteSection() {
     setSubmitMessage("");
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         body: formData,
       });

@@ -1363,6 +1363,19 @@ a {
   }
 }
 
+@media (max-width: 1100px) {
+  .reviews-preview__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .review-card:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: calc(50% - 12px);
+    justify-self: center;
+  }
+}
+
 /* Tablet / smaller desktop */
 @media (max-width: 960px) {
   .services-grid {
@@ -1634,6 +1647,23 @@ a {
 
   .service-detail__content {
     padding: 30px 26px;
+  }
+
+  .reviews-preview {
+    padding: 64px 0;
+  }
+
+  .reviews-preview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .review-card {
+    padding: 24px;
   }
 
   .gallery-page {

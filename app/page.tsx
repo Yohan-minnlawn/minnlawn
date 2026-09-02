@@ -15,7 +15,6 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Minnlawn Lawn & Landscape",
   url: "https://minnlawn.com",
-  email: "yohan@minnlawn.com",
   logo: "https://minnlawn.com/images/brand/logo.webp",
   image: "https://minnlawn.com/images/hero/minnlawn-striped-lawn-hero.webp",
   description:

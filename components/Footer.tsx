@@ -53,6 +53,10 @@ export default function Footer() {
 
           <p>Residential and commercial property care in the Rochester area.</p>
 
+          <a href="tel:+15074050911" className="site-footer__phone">
+            507-405-0911
+          </a>
+
           <Link href="/#quote" className="site-footer__quote">
             Request a Free Quote &rarr;
           </Link>

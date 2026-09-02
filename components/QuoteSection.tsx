@@ -21,19 +21,18 @@ export default function QuoteSection() {
     const photoFiles = ["photo1", "photo2", "photo3"]
       .map((name) => formData.get(name))
       .filter(
-        (value): value is File =>
-          value instanceof File && value.size > 0
+        (value): value is File => value instanceof File && value.size > 0,
       );
 
     const totalPhotoBytes = photoFiles.reduce(
       (total, file) => total + file.size,
-      0
+      0,
     );
 
     if (totalPhotoBytes > MAX_PHOTO_BYTES) {
       setSubmitStatus("error");
       setSubmitMessage(
-        "The selected photos are too large. Please keep the combined photo size under 7 MB."
+        "The selected photos are too large. Please keep the combined photo size under 7 MB.",
       );
       return;
     }
@@ -56,12 +55,12 @@ export default function QuoteSection() {
       setPhotoNames(["", "", ""]);
       setSubmitStatus("success");
       setSubmitMessage(
-        "Thank you! Your quote request has been sent to Minnlawn."
+        "Thank you! Your quote request has been sent to Minnlawn.",
       );
     } catch {
       setSubmitStatus("error");
       setSubmitMessage(
-        "We couldn't send your request. Please try again in a moment."
+        "We couldn't send your request. Please try again in a moment.",
       );
     } finally {
       setIsSubmitting(false);
@@ -90,9 +89,13 @@ export default function QuoteSection() {
 
             <div>
               <strong>Local Service</strong>
-              <span>
-                Reliable lawn, landscape, and seasonal property care
-              </span>
+              <span>Reliable lawn, landscape, and seasonal property care</span>
+            </div>
+            <div>
+              <strong>Prefer to Call?</strong>
+              <a href="tel:+15074050911" className="quote-section__phone">
+                507-405-0911
+              </a>
             </div>
           </div>
         </div>
@@ -107,11 +110,7 @@ export default function QuoteSection() {
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            <input
-              type="hidden"
-              name="form-name"
-              value="quote-request"
-            />
+            <input type="hidden" name="form-name" value="quote-request" />
 
             <div className="quote-form__honeypot" aria-hidden="true">
               <label htmlFor="bot-field">
@@ -143,12 +142,7 @@ export default function QuoteSection() {
               <div className="form-field">
                 <label htmlFor="phone">Phone</label>
 
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                />
+                <input id="phone" name="phone" type="tel" autoComplete="tel" />
               </div>
             </div>
 
@@ -182,11 +176,7 @@ export default function QuoteSection() {
               <div className="form-field">
                 <label htmlFor="property-type">Property Type</label>
 
-                <select
-                  id="property-type"
-                  name="propertyType"
-                  defaultValue=""
-                >
+                <select id="property-type" name="propertyType" defaultValue="">
                   <option value="" disabled>
                     Select property type
                   </option>
@@ -198,32 +188,22 @@ export default function QuoteSection() {
               <div className="form-field">
                 <label htmlFor="service">Service</label>
 
-                <select
-                  id="service"
-                  name="service"
-                  defaultValue=""
-                >
+                <select id="service" name="service" defaultValue="">
                   <option value="" disabled>
                     Select a service
                   </option>
                   <option value="lawn-care">Lawn Care</option>
                   <option value="landscaping">Landscaping</option>
-                  <option value="cleanup">
-                    Spring &amp; Fall Cleanup
-                  </option>
+                  <option value="cleanup">Spring &amp; Fall Cleanup</option>
                   <option value="snow-removal">Snow Removal</option>
-                  <option value="tree-removal">
-                    Small Tree Removal
-                  </option>
+                  <option value="tree-removal">Small Tree Removal</option>
                   <option value="other">Other / Not Sure</option>
                 </select>
               </div>
             </div>
 
             <div className="form-field">
-              <label htmlFor="message">
-                Tell Us About Your Project
-              </label>
+              <label htmlFor="message">Tell Us About Your Project</label>
 
               <textarea
                 id="message"
@@ -250,8 +230,7 @@ export default function QuoteSection() {
                     type="file"
                     accept="image/jpeg,image/png,image/webp"
                     onChange={(event) => {
-                      const fileName =
-                        event.target.files?.[0]?.name ?? "";
+                      const fileName = event.target.files?.[0]?.name ?? "";
 
                       setPhotoNames((currentNames) => {
                         const updatedNames = [...currentNames];
@@ -280,9 +259,7 @@ export default function QuoteSection() {
               type="submit"
               disabled={isSubmitting}
             >
-              {isSubmitting
-                ? "Sending..."
-                : "Request a Free Quote"}
+              {isSubmitting ? "Sending..." : "Request a Free Quote"}
             </button>
 
             {submitMessage && (

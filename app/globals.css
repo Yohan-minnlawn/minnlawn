@@ -846,6 +846,19 @@ a {
   font-size: 0.9rem;
 }
 
+.quote-section__phone {
+  width: fit-content;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.quote-section__phone:hover {
+  color: #cddd9f;
+}
+
 .quote-form-card {
   padding: 36px;
   background: #ffffff;
@@ -1116,6 +1129,19 @@ a {
 .site-footer__bottom p {
   color: var(--text-muted);
   font-size: 0.76rem;
+}
+
+.site-footer__phone {
+  display: block;
+  width: fit-content;
+  margin-top: 14px;
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.site-footer__phone:hover {
+  color: var(--green-hover);
 }
 
 .page-hero {

@@ -15,6 +15,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Minnlawn Lawn & Landscape",
   url: "https://minnlawn.com",
+  telephone: "+1-507-405-0911",
   logo: "https://minnlawn.com/images/brand/logo.webp",
   image: "https://minnlawn.com/images/hero/minnlawn-striped-lawn-hero.webp",
   description:

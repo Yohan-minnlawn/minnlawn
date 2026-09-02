@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "About Minnlawn Lawn & Landscape | Rochester, MN",
+  description:
+    "Learn about Minnlawn, a family-owned lawn care and landscaping company based in Mantorville, Minnesota, serving residential and commercial properties throughout the Rochester area.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Minnlawn Lawn & Landscape | Rochester, MN",
+    description:
+      "Family-owned lawn care, landscaping, seasonal cleanup, snow removal, and outdoor property service for the Rochester, Minnesota area.",
+    url: "https://minnlawn.com/about",
+  },
+};
 
 export default function AboutPage() {
   return (

@@ -1,5 +1,5 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 
@@ -85,6 +85,21 @@ const galleryItems = [
     alt: "Freshly striped lawn maintained by Minnlawn",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Lawn Care & Landscaping Project Gallery in Rochester, MN",
+  description:
+    "View Minnlawn lawn care, landscaping, retaining wall, rock bed, cleanup, and outdoor property projects completed throughout the Rochester, Minnesota area.",
+  alternates: {
+    canonical: "/gallery",
+  },
+  openGraph: {
+    title: "Minnlawn Project Gallery | Rochester, MN",
+    description:
+      "See lawn care, landscaping, and outdoor property projects completed by Minnlawn throughout the Rochester area.",
+    url: "https://minnlawn.com/gallery",
+  },
+};
 
 export default function GalleryPage() {
   return (

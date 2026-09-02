@@ -10,9 +10,44 @@ import GalleryPreview from "@/components/GalleryPreview";
 import QuoteSection from "@/components/QuoteSection";
 import Footer from "@/components/Footer";
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Minnlawn Lawn & Landscape",
+  url: "https://minnlawn.com",
+  email: "yohan@minnlawn.com",
+  logo: "https://minnlawn.com/images/brand/logo.webp",
+  image: "https://minnlawn.com/images/hero/minnlawn-striped-lawn-hero.webp",
+  description:
+    "Professional lawn care, landscaping, seasonal cleanup, snow removal, and outdoor property services for residential and commercial clients in the Rochester, Minnesota area.",
+  areaServed: {
+    "@type": "City",
+    name: "Rochester",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "MN",
+      addressCountry: "US",
+    },
+  },
+  serviceType: [
+    "Lawn Care",
+    "Landscaping",
+    "Spring Cleanup",
+    "Fall Cleanup",
+    "Snow Removal",
+    "Small Tree Removal",
+  ],
+};
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
+      />
       <SiteHeader />
       <section className="hero">
         <Image

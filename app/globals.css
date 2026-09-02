@@ -849,7 +849,7 @@ a {
 .quote-section__phone {
   width: fit-content;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;

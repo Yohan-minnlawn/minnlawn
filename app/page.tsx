@@ -28,14 +28,6 @@ const localBusinessSchema = {
       addressCountry: "US",
     },
   },
-  serviceType: [
-    "Lawn Care",
-    "Landscaping",
-    "Spring Cleanup",
-    "Fall Cleanup",
-    "Snow Removal",
-    "Small Tree Removal",
-  ],
 };
 
 export default function Home() {

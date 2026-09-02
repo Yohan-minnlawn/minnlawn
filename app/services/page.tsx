@@ -36,7 +36,7 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
-      <SeasonalSpotlight />
+      <SeasonalSpotlight showButton={false} />
       <ServiceDetails />
       <Footer />
     </main>

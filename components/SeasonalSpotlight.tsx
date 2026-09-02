@@ -40,7 +40,11 @@ const getSeason = (month: number): Season => {
   };
 };
 
-export default function SeasonalSpotlight() {
+export default function SeasonalSpotlight({
+  showButton = true,
+}: {
+  showButton?: boolean;
+}) {
   const [season, setSeason] = useState<Season>({
     title: "Seasonal Property Care",
     description:
@@ -75,9 +79,11 @@ export default function SeasonalSpotlight() {
           </p>
         </div>
 
-        <Link href="/services" className="btn btn--primary">
-          Explore Services
-        </Link>
+        {showButton && (
+          <Link href="/services" className="btn btn--primary">
+            Explore Services
+          </Link>
+        )}
       </div>
     </section>
   );

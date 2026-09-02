@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SeasonalSpotlight from "@/components/SeasonalSpotlight";
@@ -12,8 +13,16 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main>
-    <SiteHeader />
+      <SiteHeader />
       <section className="hero">
+        <Image
+          src="/images/hero/minnlawn-striped-lawn-hero.webp"
+          alt=""
+          fill
+          preload
+          sizes="100vw"
+          className="hero__image"
+        />
         <div className="hero__overlay" />
 
         <div className="container hero__content">

@@ -238,9 +238,13 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: url("/images/hero/minnlawn-striped-lawn-hero.webp")
-  center 30% / cover no-repeat;
+  background: var(--green-dark);
   color: #ffffff;
+}
+
+.hero__image {
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 .hero__overlay {

@@ -81,7 +81,7 @@ a {
 }
 
 .eyebrow {
-  color: var(--green);
+  color: var(--green-hover);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -110,12 +110,12 @@ a {
 }
 
 .btn--primary {
-  background: var(--green);
+  background: var(--green-hover);
   color: #ffffff;
 }
 
 .btn--primary:hover {
-  background: var(--green-hover);
+  background: var(--green-dark);
   box-shadow: 0 8px 22px rgba(107, 142, 35, 0.22);
 }
 
@@ -130,7 +130,7 @@ a {
   color: #ffffff;
 }
 .promo-bar {
-  background: var(--green);
+  background: var(--green-hover);
   color: #ffffff;
 }
 
@@ -392,7 +392,7 @@ a {
 
 .services-preview__all {
   flex-shrink: 0;
-  color: var(--green);
+  color: var(--green-hover);
   font-size: 0.86rem;
   font-weight: 800;
   transition: color 180ms ease;
@@ -473,7 +473,7 @@ a {
 
 .service-card__content span {
   flex-shrink: 0;
-  color: var(--green);
+  color: var(--green-hover);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -550,7 +550,7 @@ a {
 .client-type-card__link {
   align-self: flex-start;
   margin-top: 24px;
-  color: var(--green);
+  color: var(--green-hover);
   font-size: 0.84rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -709,7 +709,7 @@ a {
 }
 
 .review-card__reviewer span {
-  color: #6b8e23;
+  color: var(--green-hover);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1066,7 +1066,7 @@ a {
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--green-hover);
 }
 
 .site-footer__column nav {

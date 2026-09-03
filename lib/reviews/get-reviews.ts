@@ -5,9 +5,9 @@ import { getGooglePlaceReviews } from "./google-places";
 import type { CustomerReview } from "./types";
 
 export async function getCustomerReviews(): Promise<CustomerReview[]> {
-    if (!process.env.GOOGLE_PLACES_API_KEY) {
-  return fallbackReviews;
-}
+  if (!process.env.GOOGLE_PLACES_API_KEY) {
+    return fallbackReviews;
+  }
 
   try {
     const reviews = await getGooglePlaceReviews();

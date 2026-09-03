@@ -1,4 +1,5 @@
 import { getCustomerReviews } from "@/lib/reviews/get-reviews";
+import Image from "next/image";
 
 function getInitials(name: string) {
   return name
@@ -41,20 +42,26 @@ export default async function ReviewsPreview() {
                   {"☆".repeat(5 - filledStars)}
                 </div>
 
-                <p className="review-card__text">
-                  &ldquo;{review.text}&rdquo;
-                </p>
+                <p className="review-card__text">&ldquo;{review.text}&rdquo;</p>
 
                 <div className="review-card__footer">
                   <div className="review-card__avatar" aria-hidden="true">
-                    {getInitials(review.authorName)}
+                    {review.authorPhotoUrl ? (
+                      <Image
+                        src={review.authorPhotoUrl}
+                        alt=""
+                        width={46}
+                        height={46}
+                        className="review-card__avatar-image"
+                      />
+                    ) : (
+                      getInitials(review.authorName)
+                    )}
                   </div>
 
                   <div className="review-card__reviewer">
                     <strong>{review.authorName}</strong>
-                    <span>
-                      {review.relativePublishedAt ?? "Google Review"}
-                    </span>
+                    <span>{review.relativePublishedAt ?? "Google Review"}</span>
                   </div>
                 </div>
               </article>

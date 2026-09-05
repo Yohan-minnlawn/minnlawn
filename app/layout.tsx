@@ -21,6 +21,10 @@ export const metadata: Metadata = {
 
   applicationName: "Minnlawn Lawn & Landscape",
 
+  icons: {
+  icon: "/images/brand/logo.webp",
+},
+
   keywords: [
     "lawn care Rochester MN",
     "landscaping Rochester MN",

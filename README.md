@@ -31,4 +31,4 @@ The site is being built as a custom website and will be deployed through Netlify
 
 ## Status
 
-In development.
+Live at https://www.minnlawn.com.

@@ -68,6 +68,11 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Minnlawn Lawn &amp; Landscape. All
           rights reserved.
         </p>
+
+        <nav className="site-footer__legal" aria-label="Legal">
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Service</Link>
+        </nav>
       </div>
     </footer>
   );
